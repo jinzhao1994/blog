@@ -29,19 +29,12 @@
 </head>
 <body>
 
-<header class="page-header" role="banner" style="padding: 0.5rem">
-    <div style="max-width: 64rem; margin: auto; text-align: left; padding-left: 6rem; padding-right: 6rem;">
-        <h1><a href="{{ site.baseurl }}/" style="color: #fff;">jinzhao1994's blogs</a></h1>
-    </div>
+<header class="page-header" role="banner">
+    <h1 class="project-name">jinzhao1994's blogs</h1>
+    <h2 class="project-tagline"></h2>
 </header>
 
 <main id="content" class="main-content" role="main">
-    <div>
-        <h1 style="display: inline">{{ page.title }}</h1>
-        &nbsp;
-        <small>{{ page.date | date: "%Y-%m-%d" }}</small>
-    </div>
-
     {{ content }}
 
     <footer class="site-footer">
