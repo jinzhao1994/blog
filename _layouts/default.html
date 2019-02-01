@@ -58,11 +58,16 @@
 
     <script async src="https://just-comments.com/w.js"></script>
     <script>
-        setTimeout(function () {
-            document.getElementById("comments-div")
-                .firstElementChild.firstElementChild.lastElementChild
-                .setAttribute('hidden', true);
-        }, 100);
+        function hideCommentsSign() {
+            let a = document.getElementById("comments-div").firstElementChild.firstElementChild;
+            if (a == null) {
+                setTimeout(hideCommentsSign, 20);
+            } else {
+                a.lastElementChild.setAttribute('hidden', true);
+            }
+        }
+
+        hideCommentsSign();
     </script>
 </main>
 
