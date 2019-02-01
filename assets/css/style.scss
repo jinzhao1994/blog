@@ -1,0 +1,9 @@
+---
+---
+@import "{{ site.theme }}";
+
+.compact-table td, .compact-table th {
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+  font-size: 1.0rem;
+}
