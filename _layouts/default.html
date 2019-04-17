@@ -33,10 +33,6 @@
     });
 
 
-
-
-
-
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
             type="text/javascript" async></script>
@@ -58,14 +54,26 @@
 
 <main id="content" class="main-content" role="main">
     <div>
-        <h1 style="display: inline">{{ page.title }}</h1>
-        &nbsp;
-        <small>{{ page.date | date: "%Y-%m-%d" }}</small>
+        <h1 style="display: inline">{{ page.title }}</h1> &nbsp;
+        <small>创建于: {{ page.date | date: "%Y-%m-%d" }}</small> &nbsp;
     </div>
 
     {{ content }}
 
-    <div id="comments-div" style="margin-top: 3rem">
+    <div style="margin-top: 2rem">
+        <span style="width: 50%; display: inline-block">
+            {% if page.previous.url %}
+            <a href="{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+            {% endif %}
+        </span>
+        <span style="width: 49%; display: inline-block; text-align: right">
+            {% if page.next.url %}
+            <a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+    <div id="comments-div" style="margin-top: 2rem">
         <div class="just-comments" data-locale="zh_CN" data-apikey="339b7b32-39c3-450f-be7e-fac1b9c443d1"></div>
     </div>
 

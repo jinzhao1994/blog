@@ -1,3 +1,7 @@
 baseurl: /blogs
 
 theme: jekyll-theme-cayman
+
+collections:
+  tutorial:
+    output: true
