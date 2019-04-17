@@ -8,6 +8,7 @@ title: jinzhao1994's tutorial
     <h2 id="index-title">文章列表</h2>
     <table style="font-size: 1rem;">
         {% for item in site.tutorial %}
+        {% if item.layout != "index" %}
         <tr class="index-item">
             {% assign t = item.title | split: ' ' %}
             <td style="border: none; padding: 0.25rem; white-space: nowrap; text-align: right;">
@@ -17,6 +18,7 @@ title: jinzhao1994's tutorial
                 <a href="{{ site.baseurl }}{{ item.url }}">{{ t | shift | join: ' ' }}</a>
             </td>
         </tr>
+        {% endif %}
         {% endfor %}
     </table>
 </div>
